@@ -13,3 +13,5 @@
     - { role: firewalld, tags: firewalld }
     - { role: unneeded_services, tags: unneeded_services }
     - { role: ipv6, tags: ipv6 }
+    - { role: user, tags: user_app, name: app, comment: "Application user" }
+    - { role: user, tags: user_anthony, name: anthony, comment: "Anthony Candaele" }

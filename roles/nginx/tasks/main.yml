@@ -13,3 +13,9 @@
            enabled=yes
            state=started
 
+- name: Disable default website
+  command: mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.disabled
+           creates=/etc/nginx/conf.d/default.conf.disabled
+           removes=/etc/nginx/conf.d/default.conf
+  notify: Restart nginx
+

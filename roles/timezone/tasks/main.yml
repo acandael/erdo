@@ -2,6 +2,6 @@
 
 - name: Set timezone
   file:  src=/usr/share/zoneinfo/Europe/Brussels
-  dest=/etc/localtime
-  state=link
-  force=yes
+         dest=/etc/localtime
+         state=link
+         force=yes

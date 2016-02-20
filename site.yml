@@ -4,3 +4,9 @@
   remote_user: root
   roles:
     - { role: selinux, tags: selinux }
+    - { role: cron, tags: cron }
+    - { role: timezone, tags: timezone }
+    - { role: chrony, tags: chrony }
+    - { role: git, tags: git }
+    - { role: root_password, tags: root_password }
+    - { role: ssh, tags: ssh }

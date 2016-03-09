@@ -16,3 +16,6 @@
     - { role: user, tags: user_app, name: app, comment: "Application user" }
     - { role: user, tags: user_anthony, name: anthony, comment: "Anthony Candaele" }
     - { role: nginx, tags: nginx }
+    - { role: mariadb, tags: mariadb }
+    - { role: nodejs, tags: nodejs }
+    - { role: ruby, tags: ruby_app, user: app, version: 2.2.4 }

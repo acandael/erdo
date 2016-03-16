@@ -9,7 +9,7 @@
   become_user: "{{ user }}"
 
 - name: Install rbenv plugins for {{ user }}
-  git: repo=https://github.com/rbenv/{{ item }}
+  git: repo=https://github.com/rbenv/{{ item }}.git
        dest=~{{ user }}/.rbenv/plugins/{{ item }}
        accept_hostkey=yes
        update=no
@@ -17,7 +17,6 @@
     - ruby-build
     - rbenv-vars
     - rbenv-gem-rehash
-
   become: yes
   become_user: "{{ user }}"
 

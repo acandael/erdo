@@ -146,6 +146,13 @@
     - 127.0.0.1
     - localhost
 
+- name: Copy database configuration
+  template: src=database.yml.j2
+            dest=/var/www/myapp/shared/config/database.yml
+            owner=app
+            group=app
+            mode=0600
+
 - name: Load database schema
   shell: ~/.rbenv/shims/bundle exec rake db:schema:load
          chdir=/var/www/myapp/application

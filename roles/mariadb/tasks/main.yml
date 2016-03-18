@@ -28,7 +28,7 @@
 
 - name: Setup my.conf
   template: src=my.cnf.j2
-            dest=/root/.mycnf
+            dest=/root/.my.cnf
             owner=root
             group=root
             mode=0600

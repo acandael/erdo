@@ -5,9 +5,7 @@ After=network.target
 [Service]
 Type=forking
 PIDFile=/var/www/myapp/shared/pids/unicorn.pid
-ExecStart=/usr/bin/bash -lc "cd /var/www/myapp/application &&
-/home/app/.rbenv/shims/bundle exec unicorn -D -c
-/var/www/myapp/shared/config/unicorn.rb -E production"
+ExecStart=/usr/bin/bash -lc "cd /var/www/myapp/application && /home/app/.rbenv/shims/bundle exec unicorn -D -c /var/www/myapp/shared/config/unicorn.rb -E production"
 ExecReload=/bin/kill -s USR2 $MAINPID
 ExecStop=/bin/kill -s QUIT $MAINPID
 
